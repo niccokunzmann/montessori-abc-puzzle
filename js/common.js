@@ -1,6 +1,6 @@
-function getQuery() {
+function getQuery(query) {
   // from http://stackoverflow.com/a/1099670/1320237
-  var qs = document.location.search;
+  var qs = query || document.location.search;
   var tokens, re = /[?&]?([^=]+)=([^&]*)/g;
   var specification = {};
   qs = qs.split("+").join(" ");

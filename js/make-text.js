@@ -76,7 +76,7 @@ function displayText(text) {
 }
 
 function download(filename, text) {
-  document.location = 'download.html?content=' + encodeURIComponent(text) +
+  document.location = 'download.html#content=' + encodeURIComponent(text) +
     "&filename=" + encodeURIComponent(filename) +
     "&mimetype=" + encodeURIComponent("image/svg+xml");
 }
