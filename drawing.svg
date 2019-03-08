@@ -17,8 +17,11 @@
    inkscape:version="0.48.5 r10040"
    sodipodi:docname="drawing.svg">
   <script
-     xlink:href="js/make-text.js"
-     id="script4463" />
+   xlink:href="js/make-text.js"
+   id="script4463" />
+  <script
+   xlink:href="js/common.js"
+   id="script446333" />
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -48,9 +51,6 @@
      fit-margin-left="2"
      fit-margin-right="2"
      fit-margin-bottom="2" />
-  <script
-     src="make-text.js"
-     id="script4399" />
   <metadata
      id="metadata7">
     <rdf:RDF>

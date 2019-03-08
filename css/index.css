@@ -1,0 +1,17 @@
+
+#embed {
+  width: 100%;
+}
+
+header {
+  text-align: center;
+}
+
+footer {
+  color: gray;
+  margin-top: 1em;
+}
+
+footer a {
+  color: gray;
+}

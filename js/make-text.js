@@ -1,20 +1,5 @@
-var letters = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZzÄäÖöÜüß0123456789 +-";
-var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜß0123456789 +-=";
-
-function getQuery() {
-  // from http://stackoverflow.com/a/1099670/1320237
-  var qs = document.location.search;
-  var tokens, re = /[?&]?([^=]+)=([^&]*)/g;
-  var specification = {};
-  qs = qs.split("+").join(" ");
-
-  while (tokens = re.exec(qs)) {
-    var id = decodeURIComponent(tokens[1]);
-    var content = decodeURIComponent(tokens[2]);
-    specification[id] = content;
-  }
-  return specification;
-}
+var letters = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZzÄäÖöÜüß0123456789 +-?";
+var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜß0123456789 +-=?";
 
 function getLayerNamed(name) {
   var layers = document.getElementsByTagName("g");
@@ -90,7 +75,21 @@ function displayText(text) {
   document.rootElement.setAttribute("width", newWidth);
 }
 
+function download(filename, text) {
+  document.location = 'download.html?content=' + encodeURIComponent(text) +
+    "&filename=" + encodeURIComponent(filename) +
+    "&mimetype=" + encodeURIComponent("image/svg+xml");
+}
+
 window.addEventListener("load", function(){
-  var text = getQuery().text;
-  displayText(text);
-})
+  var query = getQuery();
+  var text = query.text;
+  displayText(text || "?");
+  if (query.download) {
+    var content = '<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n' +
+      '<!-- Created with Montessori ABC Puzzle (https://github.com/niccokunzmann/montessori-abc-puzzle) -->\n' +
+      '<!-- Created with Inkscape (http://www.inkscape.org/) -->\n' +
+      document.rootElement.outerHTML;
+    download("puzzle-" + text + ".svg", content);
+  }
+});

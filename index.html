@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Open Web Calendar</title>
+        <title>Montessori ABC Puzzle</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/index.css"
             rel="stylesheet" type="text/css" charset="utf-8">
@@ -9,14 +9,19 @@
     </head>
     <body>
         <header>
-            <h1>Open Web Calendar</h1>
+            <h1>Montessori ABC Puzzle</h1>
         </header>
         <main>
+          <input id="user-text" placeholder="text" onkeyup="updateImage(this)"/>
+          <a id="link" href="drawing.svg?text=text" target="_blank">SVG</a>
+          <a id="download" href="drawing.svg?text=text&download=true" target="_blank">↓</a>
+          <!-- how to embed, see http://www.schepers.cc/svg/blendups/embedding.html -->
+          <iframe id="embed" src="drawing.svg?text=text" type="image/svg+xml"></iframe>
         </main>
         <footer>
-            The open web calendar is open-source.
+            The project is open-source.
             You can contribute and view the source code on
-            <a href="https://github.com/niccokunzmann/open-web-calendar"
+            <a href="https://github.com/niccokunzmann/montessori-abc-puzzle"
                >GitHub</a>.
         </footer>
     </body>
