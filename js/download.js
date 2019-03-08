@@ -18,5 +18,5 @@ function download(filename, text, mimetype) {
 window.addEventListener("load", function(){
   var query = getQuery(document.location.hash.substring(1));
   download(query.filename, query.content, query.mimetype);
-  window.close();
+  setTimeout(window.close, 5000);
 });
