@@ -13,8 +13,9 @@
         </header>
         <main>
           <input id="user-text" placeholder="text" onkeyup="updateImage(this)"/>
-          <a id="link" href="drawing.svg?text=text" target="_blank">SVG</a>
-          <a id="download" href="drawing.svg?text=text&download=true" target="_blank">↓</a>
+          <a id="link" href="drawing.svg?text=text" target="_blank">View</a>
+          <a id="downloadSVG" href="drawing.svg?text=text&download=svg" target="_blank">SVG↓</a>
+          <a id="downloadPDF" href="drawing.svg?text=text&download=pdf" target="_blank">PDF↓</a>
           <!-- how to embed, see http://www.schepers.cc/svg/blendups/embedding.html -->
           <iframe id="embed" src="drawing.svg?text=text" type="image/svg+xml"></iframe>
         </main>

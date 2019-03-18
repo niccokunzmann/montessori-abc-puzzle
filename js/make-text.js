@@ -75,10 +75,11 @@ function displayText(text) {
   document.rootElement.setAttribute("width", newWidth);
 }
 
-function download(filename, text) {
+function download(filename, text, to) {
   document.location = 'download.html#content=' + encodeURIComponent(text) +
     "&filename=" + encodeURIComponent(filename) +
-    "&mimetype=" + encodeURIComponent("image/svg+xml");
+    "&mimetype=" + encodeURIComponent("image/svg+xml") +
+    "&to=" + encodeURIComponent(to);
 }
 
 window.addEventListener("load", function(){
@@ -90,6 +91,6 @@ window.addEventListener("load", function(){
       '<!-- Created with Montessori ABC Puzzle (https://github.com/niccokunzmann/montessori-abc-puzzle) -->\n' +
       '<!-- Created with Inkscape (http://www.inkscape.org/) -->\n' +
       document.rootElement.outerHTML;
-    download("puzzle-" + text + ".svg", content);
+    download("puzzle-" + text + ".svg", content, query.download);
   }
 });

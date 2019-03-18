@@ -6,8 +6,10 @@ function updateImage() {
   embed.data = embed.src = url;
   var link = document.getElementById("link");
   link.href = url;
-  var download = document.getElementById("download");
-  download.href = url + "&download=true";
+  var downloadSVG = document.getElementById("downloadSVG");
+  downloadSVG.href = url + "&download=svg";
+  var downloadPDF = document.getElementById("downloadPDF");
+  downloadPDF.href = url + "&download=pdf";
 }
 
 window.addEventListener("load", updateImage);
