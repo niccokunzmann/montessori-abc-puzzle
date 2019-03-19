@@ -1,11 +1,12 @@
 Montessori ABC Puzzle
 =====================
 
-Create puzzles with letters.
+Create puzzles with letters. **[Try it out][web]**
 
 - open-source
 - letters always compatible
 - SVG & PDF for editing and cutting
+- [Discussion with the German community][wilap]
 
 Development
 -----------
@@ -22,4 +23,5 @@ Dependencies
 
 [PrintAtHPI]: https://github.com/niccokunzmann/printathpi
 [Inkscape]: http://inkscape.org/
-
+[web]: https://niccokunzmann.github.io/montessori-abc-puzzle/
+[wilap]: https://forum.wilap.de/t/montessori-abc-puzzle/249
