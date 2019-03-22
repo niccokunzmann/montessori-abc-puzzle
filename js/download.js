@@ -75,5 +75,5 @@ window.addEventListener("load", function(){
   } else {
     download(query.filename, query.content, query.mimetype);
   }
-  //setTimeout(window.close, 5000);
+  setTimeout(window.close, 3000);
 });
