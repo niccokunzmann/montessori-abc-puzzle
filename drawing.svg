@@ -17,11 +17,11 @@
    inkscape:version="0.48.5 r10040"
    sodipodi:docname="drawing.svg">
   <script
-   xlink:href="js/make-text.js"
-   id="script4463" />
+     xlink:href="js/make-text.js"
+     id="script4463" />
   <script
-   xlink:href="js/common.js"
-   id="script446333" />
+     xlink:href="js/common.js"
+     id="script446333" />
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -35,11 +35,11 @@
      inkscape:cx="153.19185"
      inkscape:cy="45.864853"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer6"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1036"
-     inkscape:window-x="4"
+     inkscape:window-x="0"
      inkscape:window-y="44"
      inkscape:window-maximized="0"
      units="mm"
@@ -105,18 +105,6 @@
        width="744.09448"
        height="1052.3622" />
     <path
-       sodipodi:nodetypes="czzc"
-       inkscape:connector-curvature="0"
-       id="path4284"
-       d="m 334.51364,198.93115 c 0,0 0,28.3769 0,34.18103 0,5.80413 2.10183,17.90232 5.9375,3.58739 3.83567,-14.31493 5.9375,10.57972 5.9375,14.94368"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 334.51364,304.35535 c 0,0 0,-28.3769 0,-34.18103 0,-5.80413 2.10183,-17.90232 5.9375,-3.58739 3.83567,14.31493 5.9375,-10.57972 5.9375,-14.94368"
-       id="path4286"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="czzc" />
-    <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 228.21443,304.35535 106.29921,0"
        id="tileWidth"
@@ -124,7 +112,7 @@
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-size:87.67693328999999380px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Asana Math;-inkscape-font-specification:Asana Math;font-stretch:normal;font-variant:normal"
+       style="font-size:87.67693329px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Asana Math;-inkscape-font-specification:Asana Math"
        x="266.47726"
        y="298.07895"
        id="text4290"
@@ -134,7 +122,27 @@
          id="text"
          x="266.47726"
          y="298.07895"
-         style="-inkscape-font-specification:Asana Math;font-family:Asana Math;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">W</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Asana Math;-inkscape-font-specification:Asana Math">W</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="divide"
+     style="display:inline">
+    <path
+       transform="translate(-220.62782,-173.41319)"
+       sodipodi:nodetypes="czzc"
+       inkscape:connector-curvature="0"
+       id="path4284"
+       d="m 334.51364,198.93115 c 0,0 0,28.3769 0,34.18103 0,5.80413 2.10183,17.90232 5.9375,3.58739 3.83567,-14.31493 5.9375,10.57972 5.9375,14.94368"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline" />
+    <path
+       transform="translate(-220.62782,-173.41319)"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 334.51364,304.35535 c 0,0 0,-28.3769 0,-34.18103 0,-5.80413 2.10183,-17.90232 5.9375,-3.58739 3.83567,14.31493 5.9375,-10.57972 5.9375,-14.94368"
+       id="path4286"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="czzc" />
   </g>
   <g
      inkscape:groupmode="layer"

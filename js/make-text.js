@@ -1,3 +1,4 @@
+var SYLLABLE_DIVIDER = "|";
 var letters = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZzÄäÖöÜüß0123456789 +-?";
 var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜß0123456789 +-=?";
 
@@ -43,15 +44,26 @@ function createMovedLayer(layer, xOffset) {
   return movedLayer;
 }
 
-function createMovedTileLayers(letter, xOffset) {
+/* This create a new puzzle piece by moving existing layers.
+ * - letter is the letter to create, a string like "a"
+ * - xOffset is the amount of units to move the layers.
+ * - addDivider is a boolean whether to add a right border to the puzzle piece
+ */
+function createMovedTileLayers(letter, xOffset, addDivider) {
+  var movedLayers = [];
+  // create the move layer including the letter
   var letterBefore = document.getElementById("text").innerHTML;
   document.getElementById("text").innerHTML = letter;
-  var movedLayers = [];
   try {
     movedLayers.push(createMovedLayer(getLayerNamed("move"), xOffset));
   } finally {
     document.getElementById("text").innerHTML = letterBefore;
   }
+  // add the layer which is used for dividing the puzzle pieces
+  if (addDivider) {
+    movedLayers.push(createMovedLayer(getLayerNamed("divide"), xOffset));
+  }
+  // add the puzzle layers which identify the letter
   letterToLayers(letter).forEach(function (layer) {
     layer.style.display = "inline";
     movedLayers.push(createMovedLayer(layer, xOffset));
@@ -61,15 +73,28 @@ function createMovedTileLayers(letter, xOffset) {
 }
 
 function displayText(text) {
+  var hasManualSyllableDivision = text.includes(SYLLABLE_DIVIDER);
+  var puzzleIndex = 1;
   for (var i = 1; i < text.length; i++) {
     var letter = text[i];
-    var xOffset = getTileWidth() * i;
-    createMovedTileLayers(letter, xOffset);
+    if (letter == SYLLABLE_DIVIDER) {
+      continue;
+    }
+    var hasBorderToNextTile = i + 1 < text.length ?
+      text[i+1] == SYLLABLE_DIVIDER || !hasManualSyllableDivision : true;
+    var xOffset = getTileWidth() * puzzleIndex;
+    createMovedTileLayers(letter, xOffset, hasBorderToNextTile);
+    puzzleIndex++;
   }
+  // set the first letter
   letterToLayers(text[0]).forEach(function(layer) {
     layer.style.display = "inline";
   });
   document.getElementById("text").innerHTML = text[0];
+  if (text.length >= 2 && text[1] != SYLLABLE_DIVIDER && hasManualSyllableDivision) {
+    getLayerNamed("divide").style.display = "none";
+  }
+  // set the dimenstions of the file
   var initialWidth = parseFloat(document.rootElement.getAttribute("width"));
   var newWidth = initialWidth + getTileWidth() * (text.length - 1);
   document.rootElement.setAttribute("width", newWidth);

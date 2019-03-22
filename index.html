@@ -12,10 +12,16 @@
             <h1>Montessori ABC Puzzle</h1>
         </header>
         <main>
-          <input id="user-text" placeholder="text" onkeyup="updateImage(this)"/>
-          <a id="link" href="drawing.svg?text=text" target="_blank">View</a>
-          <a id="downloadSVG" href="drawing.svg?text=text&download=svg" target="_blank">SVG↓</a>
-          <a id="downloadPDF" href="drawing.svg?text=text&download=pdf" target="_blank">PDF↓</a>
+          <p>
+            Input your text below to create puzzle pieces.
+            You can divide syllables with |.
+          </p>
+          <p>
+            <input id="user-text" placeholder="text" onkeyup="updateImage(this)"/>
+            <a id="link" href="drawing.svg?text=text" target="_blank">View</a>
+            <a id="downloadSVG" href="drawing.svg?text=text&download=svg" target="_blank">SVG↓</a>
+            <a id="downloadPDF" href="drawing.svg?text=text&download=pdf" target="_blank">PDF↓</a>
+          </p>
           <!-- how to embed, see http://www.schepers.cc/svg/blendups/embedding.html -->
           <iframe id="embed" src="drawing.svg?text=text" type="image/svg+xml"></iframe>
         </main>
