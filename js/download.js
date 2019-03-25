@@ -60,6 +60,7 @@ function pdf(filename, text, mimetype) {
                 var blob = new Blob([xhr.response], {type: "application/pdf"});
                 var objectUrl = URL.createObjectURL(blob);
                 downloadUrl(pdfFilename, objectUrl);
+                setTimeout(window.close, 3000);
             } else {
                 alert("Could not convert to PDF.");
             }
@@ -74,6 +75,7 @@ window.addEventListener("load", function(){
     pdf(query.filename, query.content, query.mimetype);
   } else {
     download(query.filename, query.content, query.mimetype);
+    setTimeout(window.close, 3000);
   }
-  setTimeout(window.close, 3000);
+  
 });
